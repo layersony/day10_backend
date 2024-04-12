@@ -5,8 +5,8 @@ from flask_restful import Api, Resource, reqparse
 from flask_jwt_extended import JWTManager, jwt_required, create_access_token
 
 app = Flask(__name__)
-postgres_Database="postgres://maingi:k63O7SpeNYEn7U6dpDgaNWSTktsLfAcB@dpg-cocj3r8l5elc739tpkt0-a.oregon-postgres.render.com/day10_books"
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///books.db'
+postgres_Database="postgresql://maingi:k63O7SpeNYEn7U6dpDgaNWSTktsLfAcB@dpg-cocj3r8l5elc739tpkt0-a.oregon-postgres.render.com/day10_books"
+app.config['SQLALCHEMY_DATABASE_URI'] = postgres_Database
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_SECRET_KEY'] = 'leo ni Friday'
 
